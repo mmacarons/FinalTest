@@ -40,7 +40,7 @@ public class ConnectServer {
         client.newCall(request).enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
-
+                Log.e("서버연결실패", e.toString());
             }
 
             @Override
