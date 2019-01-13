@@ -55,6 +55,9 @@ public class LoginActivity extends BaseActivity {
                                 GlobalData.loginUser = user;
                                 Log.d("로그인응답", "로그인한사람이름 : "+user.getName());
 
+                                String token = data.getString("token");
+                                GlobalData.token = token;
+
                                 Intent intent = new Intent(mContext, MainActivity.class);
                                 startActivity(intent);
                                 finish();
